@@ -4,14 +4,21 @@ jQuery.titleAlternator
 A jQuery extension used to flash multiple titles (alternate between them) in a browser.
 
 *Usage*
+
 $.titleAlternator(string[] || string, { options });
 
 *Available Options*
+
 _duration_ (number)(default 10000): The number of MS the alternating should last for.
+
 _interval_ (number)(default 1000): The number of MS to show a title before alternating to the next.
+
 _quitWhenFocused_ (bool)(default true): Should the alternting automatically stop when the browser window is focused?
+
 _onlyStartIfBlurred_ (bool)(default true): Should the alternating only start if the browser window is not focused?
+
 _baseTitle_ (string)(default document.title): The title that the browser should revert to once the alternating has stopped.
+
 
 *Example Usage*
 _Basic - string with No Options_
