@@ -22,7 +22,7 @@ Notes:
         }
         
         //if blur is required but the screen is focused, just kill it
-        if (_settings.startIfBlurred && _isWindowFocused) {
+        if (_settings.onlyStartIfBlurred && _isWindowFocused) {
             return;
         }
 
@@ -104,7 +104,7 @@ Notes:
         duration: 10000,
         interval: 1000,
         quitWhenFocused: true,
-        startIfBlurred: true,
+        onlyStartIfBlurred: true,
         baseTitle: document.title //if the title was set before calling $.titleAlternator()
     };
 

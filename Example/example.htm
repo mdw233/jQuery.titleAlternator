@@ -1,0 +1,41 @@
+<html>
+ <head>
+   <title>Initial Title</title>
+   <script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+   <script src="../jquery.titleAlternator.js" type="text/javascript"></script>
+
+
+   <script type="text/javascript">
+
+       $(document).ready(function () {
+           $("#go").click(function () {
+               var base = $("#base-title").val();
+               var alt = $("#alt-titles").val().split("|");
+               var int = $("#interval").val();
+               var dur = $("#duration").val();
+
+               $.titleAlternator(alt,
+                { onlyStartIfBlurred: false, quitWhenFocused: false, duration: dur, interval: int, baseTitle: base });
+           });
+
+
+           $("#stop").click(function () {
+               $.titleAlternator.stop();
+           });
+       });
+
+   </script>
+
+ </head>
+ <body>
+  <h1>jQuery.titleAlternator Example</h1>
+  <p>For more info see the <a href="https://github.com/mdw233/jQuery.titleAlternator">Github repo</a></p>
+
+  <div><input type="text" id="base-title" value="The Base Title" /><span>Base Title (the title to show - in addition to the alternating titles - and revert to when duration elapses).</span></div>
+  <div><input type="text" id="alt-titles" value="Alt Title 1|Alt Title 2" /><span>Alternate Title(s) (to use multiple, separate them using a '|')</span></div>
+  <div><input type="text" id="interval" value="1000" /><span>Interval MS (the # of MS each title is shown).</span></div>
+  <div><input type="text" id="duration" value="6000" /><span>Duration MS (the # of MS that the alternating lasts).</span></div>
+  <div><input type="button" id="go" value="Start Alternating!" /></div>
+  <div><input type="button" id="stop" value="Stop Alternating!" /></div>
+ </body>
+</html>
