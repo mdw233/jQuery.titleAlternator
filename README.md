@@ -16,13 +16,13 @@ $.titleAlternator(string[] || string, { options });
 
 
 ### Example Usage
-#### _Basic - string with No Options_
+##### _Basic - string with No Options_
 $.titleAlternator("Some Alternate Title");
 
-#### _Basic - string[] with No Options_
+##### _Basic - string[] with No Options_
 $.titleAlternator(["Some Alternate Title", "Another Alternate Title", "A Third Alternate Title"]);
 
-#### _Using Options_
+##### _Using Options_
 $.titleAlternator(["Some Alternate Title", "Another One"], { duration: 20000, interval: 700, quitWhenFocused: fase, _onlyStartIfBlurred_: false, baseTitle: "Title to show after alternating is over"});
 
 ### Other Available Properties/Functions
