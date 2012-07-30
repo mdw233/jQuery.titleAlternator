@@ -1,6 +1,6 @@
 ﻿/*
 
-Author: DATEL Software Solutions
+Author: Matt Withum
 Manages the page title, including swapping the title text.
 
 Notes:
@@ -22,7 +22,7 @@ Notes:
         }
         
         //if blur is required but the screen is focused, just kill it
-        if (_settings.requireBlur && _isWindowFocused) {
+        if (_settings.startIfBlurred && _isWindowFocused) {
             return;
         }
 
@@ -103,8 +103,8 @@ Notes:
     var _defaultSettings = {
         duration: 10000,
         interval: 1000,
-        stopOnFocus: true,
-        requireBlur: true,
+        quitWhenFocused: true,
+        startIfBlurred: true,
         baseTitle: document.title //if the title was set before calling $.titleAlternator()
     };
 
@@ -144,7 +144,7 @@ Notes:
     //keeps track if the browser window is focused or not
     $(window).focus(function () {
         _isWindowFocused = true;
-        if ($.titleAlternator.IsRunning && _settings.stopOnFocus) {
+        if ($.titleAlternator.IsRunning && _settings.quitWhenFocused) {
             $.titleAlternator.stop();
         }
     })
@@ -157,7 +157,5 @@ Notes:
         return Object.prototype.toString.call(obj) === '[object Array]';
     }
 
-
-    
 
 })(jQuery);
