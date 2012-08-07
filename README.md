@@ -1,5 +1,5 @@
 # jQuery.titleAlternator
-A jQuery extension used to flash multiple titles (alternating) in a browser.
+A jQuery plugin used to flash multiple titles (alternating) in a browser.
 ##### Note / Credit
 I got the original idea from Jonathan Heyman - then just augmented a bit: http://heyman.info/2010/sep/30/jquery-title-alert/
 
@@ -24,7 +24,7 @@ $.titleAlternator(["Some Alternate Title", "Another Alternate Title", "A Third A
 ##### _Using Options_
 $.titleAlternator(["Some Alternate Title", "Another One"], { duration: 20000, interval: 700, quitWhenFocused: fase, onlyStartIfBlurred: false, baseTitle: "Title to show after alternating is over"});
 
-## Other Available Properties/Functions
+## Other Available Functions
 - _$.titleAlternator.stop()_ - stops the alternating and sets the document.title to baseTitle.
 - _$.titleAlternator.setBaseTitle(newBaseTitle)_ - sets the baseTitle.  This is useful on single page ajax pages where you might want to change the base title while the title is currently alternating, but not stop the alternating.
 - _$.titleAlternator.setAltTitles(newBaseTitle || newBaseTitles[])_ - sets the title list to alternate through.  This is useful if you want to set a new list of titles while alternating is taking place, but you don't want to stop the alternating.
