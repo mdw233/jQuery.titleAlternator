@@ -1,5 +1,5 @@
 # jQuery.titleAlternator
-A jQuery plugin used to flash multiple titles (alternating) in a browser.
+A JavaScript module (added to the jQuery namespace) used to flash multiple titles (alternating) in a browser.  Requires jQuery (tested on 1.7.2).
 ##### Note / Credit
 I got the original idea from Jonathan Heyman - then just augmented a bit: http://heyman.info/2010/sep/30/jquery-title-alert/
 

@@ -1,9 +1,7 @@
 ﻿/*
 
 Author: Matt Withum
-Manages the page title, including swapping the title text.
-
-Notes:
+Manages the page title, including swapping/alternating the title text.
 
 */
 ;(function ($) {
@@ -65,7 +63,7 @@ Notes:
     ///<param name="altTitles">Can be a string or an array of strings.</param>
     $.titleAlternator.setAltTitles = function (altTitles) {
         //if altTitles is an array, just use it.  if not, add the string to the internal array.
-        if (isArray(altTitles)) {
+        if ($.isArray(altTitles)) {
             _altTitles = altTitles;
         }
         else {
@@ -151,11 +149,5 @@ Notes:
     .blur(function () {
         _isWindowFocused = false;
     });
-
-
-    var isArray = function(obj) {
-        return Object.prototype.toString.call(obj) === '[object Array]';
-    }
-
 
 })(jQuery);
